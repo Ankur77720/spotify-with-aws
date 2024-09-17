@@ -84,6 +84,7 @@ This is a music streaming application similar to Spotify, where there are two ty
         {
             "title": "string",
             "url": "string",
+            "poster": "The poster file to upload (optional)",
             "album": "string",
             "genre": "string"
         }
