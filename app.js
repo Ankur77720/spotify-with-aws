@@ -3,6 +3,8 @@ const express = require('express');
 const session = require('express-session');
 const mongoose = require('mongoose');
 const passport = require('./config');
+const cors = require('cors'); // Add this line
+
 const authRoutes = require('./routes/auth');
 const musicRoutes = require('./routes/music');
 const playlistRoutes = require('./routes/playlist');
@@ -12,6 +14,8 @@ const favoritesRoutes = require('./routes/favorites');
 const albumRoutes = require('./routes/album'); // New album routes
 
 const app = express();
+
+app.use(cors());
 
 mongoose.connect('mongodb://localhost/music-streaming-app', {
     useNewUrlParser: true,
